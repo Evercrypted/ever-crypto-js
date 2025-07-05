@@ -24,13 +24,14 @@
     "index.js",
     "index.d.ts",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "*.node"
   ],
   "scripts": {
     "artifacts": "napi artifacts",
     "build": "napi build --platform --release",
     "build:debug": "napi build --platform",
-    "prepublishOnly": "napi prepublish -t npm",
+    "prepublishOnly": "npm test",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
