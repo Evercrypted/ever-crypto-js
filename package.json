@@ -1,0 +1,92 @@
+{
+  "name": "ever-crypto-js",
+  "version": "0.1.0",
+  "description": "Node.js native addon for the ever-crypto library - Post-quantum cryptography made simple",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "ever-crypto-js",
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "x86_64-unknown-linux-musl",
+        "aarch64-unknown-linux-gnu",
+        "i686-pc-windows-msvc",
+        "armv7-unknown-linux-gnueabihf",
+        "aarch64-apple-darwin",
+        "aarch64-pc-windows-msvc",
+        "aarch64-unknown-linux-musl",
+        "x86_64-unknown-freebsd"
+      ]
+    }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "version": "napi version"
+  },
+  "keywords": [
+    "cryptography",
+    "encryption",
+    "post-quantum",
+    "kyber",
+    "xchacha20poly1305",
+    "native-addon",
+    "napi",
+    "security",
+    "crypto",
+    "quantum-resistant",
+    "rust"
+  ],
+  "author": {
+    "name": "EverCrypto Team",
+    "email": "team@evercrypto.dev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evercrypto/ever-crypto-js.git"
+  },
+  "homepage": "https://github.com/evercrypto/ever-crypto-js#readme",
+  "bugs": {
+    "url": "https://github.com/evercrypto/ever-crypto-js/issues"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.18.0",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.5",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "packageManager": "npm@10.2.4",
+  "optionalDependencies": {
+    "ever-crypto-js-win32-x64-msvc": "0.1.0",
+    "ever-crypto-js-darwin-x64": "0.1.0",
+    "ever-crypto-js-linux-x64-gnu": "0.1.0",
+    "ever-crypto-js-linux-x64-musl": "0.1.0",
+    "ever-crypto-js-linux-arm64-gnu": "0.1.0",
+    "ever-crypto-js-win32-ia32-msvc": "0.1.0",
+    "ever-crypto-js-linux-arm-gnueabihf": "0.1.0",
+    "ever-crypto-js-darwin-arm64": "0.1.0",
+    "ever-crypto-js-win32-arm64-msvc": "0.1.0",
+    "ever-crypto-js-linux-arm64-musl": "0.1.0",
+    "ever-crypto-js-freebsd-x64": "0.1.0"
+  }
+}

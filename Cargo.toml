@@ -1,0 +1,30 @@
+[package]
+name = "ever-crypto-js"
+version = "0.1.0"
+edition = "2021"
+authors = ["EverCrypto Team <team@evercrypto.dev>"]
+license = "MIT"
+description = "Node.js native addon for the ever-crypto library - Post-quantum cryptography made simple"
+repository = "https://github.com/evercrypto/ever-crypto-js"
+keywords = ["cryptography", "post-quantum", "kyber", "xchacha20poly1305", "napi"]
+categories = ["cryptography", "api-bindings"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Core cryptography library
+ever-crypto = "0.1.0"
+
+# N-API bindings for Node.js
+napi = { version = "2.16.0", default-features = false, features = ["napi4"] }
+napi-derive = "2.16.0"
+
+# Error handling
+thiserror = "2.0"
+
+[build-dependencies]
+napi-build = "2.1.0"
+
+[profile.release]
+lto = true 
