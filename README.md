@@ -260,7 +260,7 @@ The library uses a native Rust addon for high-performance cryptographic operatio
 
 ```bash
 # Clone the repository
-git clone https://github.com/evercrypto/ever-crypto-js.git
+git clone https://github.com/evercrypted/ever-crypto-js.git
 cd ever-crypto-js
 
 # Install dependencies
@@ -312,6 +312,6 @@ See [CHANGELOG.md](CHANGELOG.md) for details about changes and updates.
 
 ## Support
 
-- 📧 Email: support@evercrypto.dev
-- 🐛 Issues: [GitHub Issues](https://github.com/evercrypto/ever-crypto-js/issues)
-- 📖 Docs: [Documentation](https://github.com/evercrypto/ever-crypto-js/wiki) 
+- 📧 Email: team@evercrypted.com
+- 🐛 Issues: [GitHub Issues](https://github.com/evercrypted/ever-crypto-js/issues)
+- 📖 Docs: [Documentation](https://github.com/evercrypted/ever-crypto-js/wiki) 

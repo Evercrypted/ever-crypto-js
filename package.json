@@ -51,17 +51,17 @@
     "rust"
   ],
   "author": {
-    "name": "EverCrypto Team",
-    "email": "team@evercrypto.dev"
+    "name": "EverCrypted Team",
+    "email": "team@evercrypted.com"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/evercrypto/ever-crypto-js.git"
+    "url": "git+https://github.com/evercrypted/ever-crypto-js.git"
   },
-  "homepage": "https://github.com/evercrypto/ever-crypto-js#readme",
+  "homepage": "https://github.com/evercrypted/ever-crypto-js#readme",
   "bugs": {
-    "url": "https://github.com/evercrypto/ever-crypto-js/issues"
+    "url": "https://github.com/evercrypted/ever-crypto-js/issues"
   },
   "devDependencies": {
     "@napi-rs/cli": "^2.18.0",
