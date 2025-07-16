@@ -187,7 +187,7 @@ switch (platform) {
             if (localFileExisted) {
               nativeBinding = require('./ever-crypto-js.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('ever-crypto-js-linux-x64-gnu')
+              loadError = new Error('Native binding not found for linux-x64-gnu. Please ensure build dependencies are installed.')
             }
           } catch (e) {
             loadError = e

@@ -1,0 +1,32 @@
+FROM --platform=linux/amd64 node:18-slim
+
+# Install build dependencies
+RUN apt-get update && apt-get install -y \
+    python3 \
+    make \
+    g++ \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Rust
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+
+# Set working directory
+WORKDIR /build
+
+# Copy package files
+COPY package*.json ./
+COPY Cargo.toml ./
+COPY Cargo.lock ./
+COPY build.rs ./
+COPY src/ ./src/
+
+# Install dependencies
+RUN npm install
+
+# Build for Linux x64 GNU (default target on this platform)
+RUN npm run build
+
+# Copy the built binary to output
+CMD ["cp", "ever-crypto-js.linux-x64-gnu.node", "/output/"]
