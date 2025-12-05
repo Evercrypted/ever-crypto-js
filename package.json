@@ -57,11 +57,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evercrypted/ever-crypto-js.git"
+    "url": "git+https://github.com/Evercrypted/ever-crypto-js.git"
   },
-  "homepage": "https://github.com/evercrypted/ever-crypto-js#readme",
+  "homepage": "https://github.com/Evercrypted/ever-crypto-js#readme",
   "bugs": {
-    "url": "https://github.com/evercrypted/ever-crypto-js/issues"
+    "url": "https://github.com/Evercrypted/ever-crypto-js/issues"
   },
   "dependencies": {
     "@napi-rs/cli": "^2.18.0"
