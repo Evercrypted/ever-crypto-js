@@ -102,8 +102,11 @@ jobs:
 
       - name: Move artifacts
         run: |
-          npm run artifacts
-          ls -R ./npm
+          cp artifacts/bindings-x86_64-apple-darwin/*.node .
+          cp artifacts/bindings-aarch64-apple-darwin/*.node .
+          cp artifacts/bindings-x86_64-unknown-linux-gnu/*.node .
+          cp artifacts/bindings-aarch64-unknown-linux-gnu/*.node .
+          ls -la *.node
 
       - name: Publish to npm
         run: npm publish --provenance --access public
