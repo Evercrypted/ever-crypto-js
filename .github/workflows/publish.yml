@@ -97,13 +97,21 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Setup Rust in Docker environment
+        if: ${{ matrix.settings.docker }}
+        run: |
+          rustup default nightly
+          rustup target add ${{ matrix.settings.target }}
+
       - name: Build in Docker
         if: ${{ matrix.settings.docker }}
         uses: addnab/docker-run-action@v3
         with:
           image: ${{ matrix.settings.docker }}
           options: '--user 0:0 -v ${{ github.workspace }}/.cargo-cache/git/db:/usr/local/cargo/git/db -v ${{ github.workspace }}/.cargo/registry/cache:/usr/local/cargo/registry/cache -v ${{ github.workspace }}/.cargo/registry/index:/usr/local/cargo/registry/index -v ${{ github.workspace }}:/build -w /build'
-          run: ${{ matrix.settings.build }}
+          run: |
+            rustup default nightly
+            ${{ matrix.settings.build }}
 
       - name: Build
         if: ${{ !matrix.settings.docker }}
