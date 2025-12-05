@@ -109,4 +109,4 @@ jobs:
           ls -la *.node
 
       - name: Publish to npm
-        run: npm publish
+        run: npm publish --provenance
