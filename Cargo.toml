@@ -1,7 +1,7 @@
 [package]
 name = "ever-crypto-js"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 authors = ["EverCrypted Team <team@evercrypted.dev>"]
 license = "MIT"
 description = "Node.js native addon for the ever-crypto library - Post-quantum cryptography made simple"
