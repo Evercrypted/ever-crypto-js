@@ -1,6 +1,6 @@
 {
   "name": "ever-crypto-js",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Node.js native addon for the ever-crypto library - Post-quantum cryptography made simple",
   "main": "index.js",
   "types": "index.d.ts",
